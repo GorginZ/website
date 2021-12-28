@@ -1,3 +1,19 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://georgialeng.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Georgia Leng'
+theme = 'cactus'
+
+[params]
+  scheme = "preference" # light, dark, gray or preference
+  mainSectionTitle = "Writings"
+  description = "DevOps Engineer . Birdwatcher . SpineSufferer"
+
+  [[menu.main]]
+    name = "About me"
+    url = "/page/about-me"
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts"
+  [[menu.main]]
+    name = "Resume"
+    url = "https://github.com/bake/solar-theme-hugo/"
