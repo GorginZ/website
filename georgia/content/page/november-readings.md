@@ -15,6 +15,10 @@ draft: true
  “Community, Identity, and Stability” this is the Brave New World's answer to the radical bourgeois revolution - not that anyone who exists in this New World understands this deliciously illegal reference - as only very few are even aware of any history (that dangerous stuff - only to be enjoyed like a fine aged Brandy by society's finest).
 
 
+ ------------- state capitalism
+
+Everything is *pneumatic* especially women, but also furniture. Every element have at their core AND OR and XOR logic gates, an appropriate and engineered dynamism.  
+
 Huxley's world is explicit. There are endless mass-produced twins, the mass of people themselves are alike to the products of the world. Their culture and perception neatly standardized. The delivery of the knowledge more formalized than the casual and consentual consumption of these things in the "unfreedom in unrestrained equality" of the old world. The New World is unashamed of this - it would be simply inefficient to have it any other way. It's shocking it was ever any other way.
 
 To think there were once mothers and fathers. The Controller can't ask people to imagine, because they can't :
@@ -39,18 +43,15 @@ Everything must be public, social a spectical and it must be consumptive, and yo
 The New World sneers at Christianity, it's archaic and illogical and worse of all it is passionate. Passion is ok, in the sense that it is utterly unavoidable (unfortunately) but it must be released in a steady stream, not powerful jets. 
 There are routine orgys which are the closest thing to a cultural religious experience the youth encounter in the New World. We experience one through Bernard. The Soma is not enough to get him where the others (allegedly) are. He lies. We assume others are lying. Or are they like those apparently happy idiots we sometimes meet? They can't really beleive their own bullshit - why do they insist so aggresively they do? Like Lenina who rocks back and forth saying ***"A Gram Is Better Than A Damn, A Gram Is Better Than A Damn"*** these people are certainly wimpering to themselves ***"Good Vibes Only, Good Vibes Only, Manifest Positive Energy".*** while the world today takes on a more grotesque form by the hour. 
 
-Our comfort is found in that Bernard (from the New World) and The Savage (made of the new and old) recognises this is hideous and he wants humanity and connection and to resist the current order. Even one of Bernard's friends is convinced to help. 
+Our comfort is found in that Bernard (from the New World) and The Savage (made of the new and old) recognises this is hideous and he wants humanity and connection and to resist the current order. Even one of Bernard's friends is convinced to help, Helmholtz in fact has the more nobel critique than Bernard, who often amounts to a pathetic character who feels a little too sorry for himself and outright complacent when things are going well for him. 
 
-*********but then where are we left? what next ?
+is the choice between engineering the state of the world or an island?
+Both Bernard and Helmholtz go to the island in the end, Bernard kicking and screaming, Helmholtz accepts it. The controller himself decided long ago to remain the law-maker.
 
-The three are able to spa with the controller. The Savage and Helmholtz engage ernestly, Bernard sulks. Bernard really is pathetic, when things go well for him, he's quite happy with the order of things - but The Savage and Helmhoultz have a more meaningful critique - Helmholtz, who writes the culture the masses consume, admit it's awful, meaningless and he hates it. Bernard is self-interested and happy to betray the only people who he had anything in common with to escape punishment. 
+The Savage - the most thoughtful and effortlessly courageous of all characters exiles himself after being denied exile on the island with his mates - and ultimately chooses suicide. This is defiant - it is a passionate, romantic and tragic death, unlike the unconfronting, mundane and efficient routine deaths in the New World, which are witnessed by flocks of twins during their **Death Conditioning** while they enjoy ecclairs.
 
-is the choice between engineering the state of the world or an island? 
-The Savage - the most thoughtful and courageous of all characters ultimately chooses suicide, defiant in that it is a passionate, romantic and tragic death, unlike the unconfronting, mundane and efficient routine deaths in the New World, which are witnessed by flocks of twins during their **Death Conditioning** while they enjoy ecclairs.
+The lighthouse.
 
-
-
-everything is pneumatic. women, furniture.
 
 
 
