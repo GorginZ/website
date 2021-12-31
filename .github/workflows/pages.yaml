@@ -13,10 +13,11 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v2
-        working-directory: ./georgia
         with:
           submodules: recurse  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+      - working-directory: ./georgia
+
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
