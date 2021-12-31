@@ -6,6 +6,5 @@ draft: true
 
 I'm a DevOps Engineer. I like birdwatching, cooking and reading.
 
-This is a WIP blog
-
+This is a WIP BLOG
 
