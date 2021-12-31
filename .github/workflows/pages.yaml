@@ -28,8 +28,8 @@ jobs:
           hugo --minify
 
       - name: Deploy
+        working-directory: "website/georgia"
         uses: peaceiris/actions-gh-pages@v3
-        working-directory: website/georgia
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
