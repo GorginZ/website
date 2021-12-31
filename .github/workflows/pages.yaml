@@ -23,7 +23,6 @@ jobs:
           hugo-version: '0.88.1'
 
       - name: Build
-        working-directory: ./georgia
         run: |
           hugo --minify
 
@@ -33,5 +32,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          working-directory: ./georgia
 
