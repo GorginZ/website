@@ -16,7 +16,7 @@ jobs:
         with:
           submodules: recurse  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-      - working-directory: ./georgia
+        - working-directory: ./georgia
 
 
       - name: Setup Hugo
