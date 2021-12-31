@@ -9,6 +9,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-20.04
+    working-directory: ./georgia
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
@@ -24,11 +25,9 @@ jobs:
 
       - name: Build
         run: |
-          cd georgia  
           hugo --minify
 
       - name: Deploy
-        working-directory: "website/georgia"
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
