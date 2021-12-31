@@ -24,7 +24,7 @@ jobs:
 
       - name: Build
         run: |
-          hugo --minify --buildDrafts --themeDir "/themes/cactus"
+          hugo --minify --buildDrafts --themesDir "/themes/cactus"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
