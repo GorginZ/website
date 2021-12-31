@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://georgialeng.com/page/december-2021-readings/</loc><lastmod>2021-12-29T14:58:23+11:00</lastmod></url><url><loc>https://georgialeng.com/</loc><lastmod>2021-12-29T14:58:23+11:00</lastmod></url><url><loc>https://georgialeng.com/page/</loc><lastmod>2021-12-29T14:58:23+11:00</lastmod></url><url><loc>https://georgialeng.com/page/november-readings/</loc><lastmod>2021-12-29T14:33:29+11:00</lastmod></url><url><loc>https://georgialeng.com/page/october-readings/</loc><lastmod>2021-12-29T13:21:53+11:00</lastmod></url><url><loc>https://georgialeng.com/posts/</loc><lastmod>2021-12-28T16:24:06+11:00</lastmod></url><url><loc>https://georgialeng.com/posts/vpc-endpoints/</loc><lastmod>2021-12-28T16:24:06+11:00</lastmod></url><url><loc>https://georgialeng.com/page/about-me/</loc><lastmod>2021-12-28T16:15:29+11:00</lastmod></url><url><loc>https://georgialeng.com/categories/</loc></url><url><loc>https://georgialeng.com/tags/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://gorginz.github.io/website/page/december-2021-readings/</loc>
+    <lastmod>2021-12-29T14:58:23+11:00</lastmod>
+  </url><url>
+    <loc>https://gorginz.github.io/website/</loc>
+    <lastmod>2021-12-29T14:58:23+11:00</lastmod>
+  </url><url>
+    <loc>https://gorginz.github.io/website/page/</loc>
+    <lastmod>2021-12-29T14:58:23+11:00</lastmod>
+  </url><url>
+    <loc>https://gorginz.github.io/website/page/november-readings/</loc>
+    <lastmod>2021-12-29T14:33:29+11:00</lastmod>
+  </url><url>
+    <loc>https://gorginz.github.io/website/page/october-readings/</loc>
+    <lastmod>2021-12-29T13:21:53+11:00</lastmod>
+  </url><url>
+    <loc>https://gorginz.github.io/website/posts/</loc>
+    <lastmod>2021-12-28T16:24:06+11:00</lastmod>
+  </url><url>
+    <loc>https://gorginz.github.io/website/posts/vpc-endpoints/</loc>
+    <lastmod>2021-12-28T16:24:06+11:00</lastmod>
+  </url><url>
+    <loc>https://gorginz.github.io/website/page/about-me/</loc>
+    <lastmod>2021-12-28T16:15:29+11:00</lastmod>
+  </url><url>
+    <loc>https://gorginz.github.io/website/categories/</loc>
+  </url><url>
+    <loc>https://gorginz.github.io/website/tags/</loc>
+  </url>
+</urlset>
