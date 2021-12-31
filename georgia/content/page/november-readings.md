@@ -4,7 +4,7 @@ date: 2021-12-29T14:33:29+11:00
 draft: true
 ---
 
-# November Readings
+# November Readings WIP
 
 *Brave New World* - **Aldous Huxley** . 
 *Aldous Huxley and Utopia (Prisms)* - **Theadore W.Adorno** . 
