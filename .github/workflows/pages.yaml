@@ -16,8 +16,6 @@ jobs:
         with:
           submodules: recurse  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-        - working-directory: ./georgia
-
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -25,10 +23,12 @@ jobs:
           hugo-version: '0.88.1'
 
       - name: Build
+        working-directory: ./georgia
         run: |
           hugo --minify
 
       - name: Deploy
+        working-directory: ./georgia
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
