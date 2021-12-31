@@ -28,9 +28,9 @@ jobs:
           hugo --minify
 
       - name: Deploy
-        working-directory: ./georgia
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
+        working-directory: ./georgia
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
