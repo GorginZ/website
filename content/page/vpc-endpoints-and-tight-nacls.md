@@ -1,7 +1,7 @@
 ---
 title: "Vpc Endpoints and Tight Nacls"
 date: 2022-01-02T12:32:12+11:00
-draft: true
+draft: false
 ---
 
 This was my first SO question. I was not disappointed by the thoughtful responses I receieved.

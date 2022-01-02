@@ -1,7 +1,7 @@
 ---
 title: "December 2021 Readings"
 date: 2021-12-29T14:58:23+11:00
-draft: true
+draft: false
 ---
 # December 2021 Readings
 
