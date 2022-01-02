@@ -11,9 +11,3 @@ theme = 'cactus'
   [[menu.main]]
     name = "About me"
     url = "/page/about-me"
-  [[menu.main]]
-    name = "Posts"
-    url = "/posts"
-  [[menu.main]]
-    name = "Resume"
-    url = "https://github.com/bake/solar-theme-hugo/"
