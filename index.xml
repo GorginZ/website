@@ -6,7 +6,17 @@
     <description>Recent content on Georgia Leng</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Dec 2021 14:58:23 +1100</lastBuildDate><atom:link href="https://www.georgialeng.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jan 2022 12:32:12 +1100</lastBuildDate><atom:link href="https://www.georgialeng.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vpc Endpoints and Tight Nacls</title>
+      <link>https://www.georgialeng.com/page/vpc-endpoints-and-tight-nacls/</link>
+      <pubDate>Sun, 02 Jan 2022 12:32:12 +1100</pubDate>
+      
+      <guid>https://www.georgialeng.com/page/vpc-endpoints-and-tight-nacls/</guid>
+      <description>This was my first SO question. I was not disappointed by the thoughtful responses I receieved.
+https://stackoverflow.com/questions/69231157/ec2-instance-cant-access-amazon-linux-repos-eg-amazon-linux-extras-install-doc/69248286#69248286</description>
+    </item>
+    
     <item>
       <title>December 2021 Readings</title>
       <link>https://www.georgialeng.com/page/december-2021-readings/</link>
@@ -36,23 +46,13 @@ Brave New World - Aldoux Huxley “Community, Identity, and Stability” this is
     </item>
     
     <item>
-      <title>Vpc Endpoints</title>
-      <link>https://www.georgialeng.com/posts/vpc-endpoints/</link>
-      <pubDate>Tue, 28 Dec 2021 16:24:06 +1100</pubDate>
-      
-      <guid>https://www.georgialeng.com/posts/vpc-endpoints/</guid>
-      <description>This was my first SO question. I was not disappointed by the thoughtful responses I receieved.
-https://stackoverflow.com/questions/69231157/ec2-instance-cant-access-amazon-linux-repos-eg-amazon-linux-extras-install-doc/69248286#69248286</description>
-    </item>
-    
-    <item>
       <title>About Me</title>
       <link>https://www.georgialeng.com/page/about-me/</link>
       <pubDate>Tue, 28 Dec 2021 16:15:29 +1100</pubDate>
       
       <guid>https://www.georgialeng.com/page/about-me/</guid>
-      <description>I&amp;rsquo;m a DevOps Engineer. I like birdwatching, cooking and reading.
-This is a WIP BLOG.</description>
+      <description>I&amp;rsquo;m a DevOps Engineer. I like casual birdwatching in my local wetlands, and enjoy cooking, reading and swimming.
+I studied history at Monash and have an interest in historical modes of production and transitory modes of production in particular. I worked as a swimming instructor previously but re-skilled as a software engineer following a spinal injury. I am interested in projects, communities and programs that increase accessability in tech, including how we work in tech.</description>
     </item>
     
   </channel>
