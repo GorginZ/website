@@ -66,11 +66,19 @@ It is not easy to arrange society this way, and it is not in fact stable. Despit
 
 the hatchery director admits a memory - youa ren't meant to dwell on memories, or be fond of people. This is his undoing. Our time outside the hatchery and conditioning is laced with transgressions like this. Often from the people responsible for writing and implementing the social engineering institutions. 
 
+There is no politics in the world.
 
 The lighthouse.
 
 
 ### Aldous Huxley and Utopia (Prisms) - Theadore W.Adorno
+WIP
+notes:
+
+adorno says huxley rather flatly equates the mind with traditional culture - Shakespeare. But I mean it's kind of fine -  Shakespeare was enjoyed by everyomne, it's not exclusive or elitist like Opera is. and it's flowery, it makes its own words up, it's like actually the opposite of the BNW 
+
+
+agree w Adorno that Freud is use inappropriately, reduced to another efficiency expert like Ford. But does he really? maybe it's fair. People DO misunderstand Freud. Everyone hates him.
 
 ### See What You Made Me Do - Jess Hill
 
