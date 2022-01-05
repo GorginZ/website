@@ -49,7 +49,7 @@ There are routine orgys which are the closest thing to a cultural religious expe
 
 Our comfort is found in that Bernard (from the New World), The Savage (made of the new and old) and some others too - recognises this is hideous and want humanity and connection and to resist the current order. 
 
-is the choice between engineering the state of the world or an island, or perhaps just a total romantic regression?
+is the choice between engineering the state of the world or an island? Or between false happiness or a total romantic regression?
 
 The populace is not actually stable. The controller says if they read Othello or could understand what it meant - they'd decapitate them. The Alphas and Beta's have enough critical reasoning and self-importance to think their own ideas matter, and to seek meaning and presumably the lower castes do too, and this concerns the engineers, but we don't see it amount to anything other than a few outbursts or temper tantrums before resigning to inaction. 
 
