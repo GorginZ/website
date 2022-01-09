@@ -13,8 +13,12 @@ theme = 'cactus'
     name = "About me"
     url = "/page/about-me"
   [[menu.main]]
-    name = "Writings"
+    name = "Posts"
     url = "/page"
+  [[menu.main]]
+    name = "Monthly Literary Writings"
+    url = "/page/literary"
+
 
 [taxonomies]
   category = 'categories'
