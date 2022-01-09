@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Georgia Leng</title>
-    <link>https://www.georgialeng.com/</link>
-    <description>Recent content on Georgia Leng</description>
+    <title>_Index on Georgia Leng</title>
+    <link>https://www.georgialeng.com/page/literary/</link>
+    <description>Recent content in _Index on Georgia Leng</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Jan 2022 13:40:55 +1100</lastBuildDate><atom:link href="https://www.georgialeng.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Dec 2021 14:58:23 +1100</lastBuildDate><atom:link href="https://www.georgialeng.com/page/literary/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>January 2022 Readings</title>
       <link>https://www.georgialeng.com/page/literary/january-2022-readings/</link>
@@ -15,16 +15,6 @@
       <guid>https://www.georgialeng.com/page/literary/january-2022-readings/</guid>
       <description>January 2022 Readings Love&amp;rsquo;s Work - Gillian Rose . &amp;ldquo;Athens and Jerusalum: a tale of three cities&amp;rdquo; in Mourning Becomes the Law - Gillian Rose . “From Speculative to Dialectical Thinking — Hegel and Adorno” in Judaism and Modernity - Gillian Rose
 Love&amp;rsquo;s Work - Gillian Rose </description>
-    </item>
-    
-    <item>
-      <title>Vpc Endpoints and Tight Nacls</title>
-      <link>https://www.georgialeng.com/page/vpc-endpoints-and-tight-nacls/</link>
-      <pubDate>Sun, 02 Jan 2022 12:32:12 +1100</pubDate>
-      
-      <guid>https://www.georgialeng.com/page/vpc-endpoints-and-tight-nacls/</guid>
-      <description>This was my first SO question. I was not disappointed by the thoughtful responses I receieved.
-https://stackoverflow.com/questions/69231157/ec2-instance-cant-access-amazon-linux-repos-eg-amazon-linux-extras-install-doc/69248286#69248286</description>
     </item>
     
     <item>
@@ -53,16 +43,6 @@ Brave New World - Aldoux Huxley “Community, Identity, and Stability” this is
       
       <guid>https://www.georgialeng.com/page/literary/october-readings/</guid>
       <description>October Readings The Martian - Andy Weir Mark Watney strikes readers as quite ordinary. We&amp;rsquo;re in his head, and it&amp;rsquo;s like our own, or rather his thoughts are similar to what we might share aloud with an ironic tone. I didn&amp;rsquo;t realize until recently most astronauts - at least American astronauts, are in fact ordinary people. A Netflix documentary I watched recently follows a dad as he prepares for a launch, he was previously in the air force.</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://www.georgialeng.com/page/about-me/</link>
-      <pubDate>Tue, 28 Dec 2021 16:15:29 +1100</pubDate>
-      
-      <guid>https://www.georgialeng.com/page/about-me/</guid>
-      <description>I&amp;rsquo;m a DevOps Engineer. I like casual birdwatching in my local wetlands, and enjoy cooking, reading and swimming.
-I studied history at Monash and have an interest in historical modes of production and transitory modes of production in particular. I worked as a swimming instructor previously but re-skilled as a software engineer following a spinal injury. I am interested in projects, communities and programs that increase accessability in tech, including how we work in tech.</description>
     </item>
     
   </channel>
