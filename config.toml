@@ -16,7 +16,7 @@ theme = 'cactus'
     name = "Posts"
     url = "/page"
   [[menu.main]]
-    name = "Monthly Literary Writings"
+    name = "Literary"
     url = "/page/literary"
 
 
