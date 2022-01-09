@@ -2,6 +2,7 @@
 title: "October Readings"
 date: 2021-12-29T13:21:53+11:00
 draft: false
+topic: monthly-reading
 ---
 # October Readings
 

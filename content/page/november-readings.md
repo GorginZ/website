@@ -2,6 +2,7 @@
 title: "November Readings"
 date: 2021-12-29T14:33:29+11:00
 draft: false
+topic: monthly-reading
 ---
 
 # November Readings

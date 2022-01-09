@@ -5,9 +5,19 @@ theme = 'cactus'
 
 [params]
   scheme = "preference" # light, dark, gray or preference
-  mainSectionTitle = "Writings"
+  mainSectionTitle = "Recent"
   description = "DevOps Engineer . Birdwatcher . SpineSufferer"
+
 
   [[menu.main]]
     name = "About me"
     url = "/page/about-me"
+  [[menu.main]]
+    name = "Writings"
+    url = "/page"
+
+[taxonomies]
+  category = 'categories'
+  topic = 'topics'
+  tag = 'tags'
+
