@@ -71,6 +71,9 @@ Auschwitz is the third city too.
 >Analysis of this kind, as opposed to refusal of analysis implicit in the demonising argument, does not see Auschwitz as the end-product and telos of modern rationality. It understands the plans as arising out of, and as falling back into, the ambitions and the tensions, the utopianism and the violence, the reason and the muddle, which is the outcome of the struggle between the politics and the anti-politics of the city. This is the *the third city* - the city in which we all live and with which we are too familiar (34)
 
  holy shit
+
+
+ 
 Dr. Robert Jan van Pelt
 van Pelt - historian who was allowed to work on the archives of Auschwitz, he worked on the 'city plans' no one had worked with before. Even before his work was released (presumably published now) it was opposed.
 
@@ -96,3 +99,7 @@ the particular - particular s in particular to group and the universal
 
 
 leszek kolakowski -> 'the left as culture' or something
+
+
+speculative thinking -> she says neitzche is speculative and kierkegaard approaches speculative thinking
+
