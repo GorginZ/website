@@ -4,34 +4,53 @@ date: 2022-01-09T13:40:55+11:00
 draft: true
 topic: monthly-reading
 ---
-# January 2022 Readings NOTES
+# January 2022 Readings
 
 *Love's Work* - **Gillian Rose** . 
-*"Athens and Jerusalum: a tale of three cities"* in **Mourning Becomes the Law** - **Gillian Rose** . 
+*Mourning Becomes the Law* - **Gillian Rose** . 
 *“From Speculative to Dialectical Thinking — Hegel and Adorno”* in **Judaism and Modernity** - **Gillian Rose**
 
 -------------------------
 
-### **Love's Work - Gillian Rose** 
+[Gillian Rose's](https://gillianrose.org) contributions to philosophy, sociology, jewish thought and radical politics are important for our time. 
 
-Rose's *Loves Work* is a mémoire. There is Death - of loved ones, in Auschwitz, the indomitable. There is Family Trauma, Judaism, Prodestantism, Faith, Love, Cancer, The Work, a taste of regret.  
-Rose's own death. 
+-------------------------
+
+# **Love's Work - Gillian Rose** 
+    
+ >>>**keep your mind in hell,**  
+ >>>**and despair not.**
+   
+   
+*Loves Work* is a mémoire. There is Death - of loved ones, in Auschwitz, the indomitable. There is Family Trauma, Judaism, Prodestantism, Faith, Love, Cancer, The Work, the taste of regret.  
+
+Rose formed part of a curated grouping of Jewish intellectuals to advise the Polish Commision on the Future of Auschwitz.
 
 
-Vulnerability 
-Love
-how did rose love?
-that predatory woman she mentions, how did *she* 'love'?
+How did rose love? Love is total. There are the two and a third - *the work* 
 
-Having loved Imperfectly is just what it is, but Rose steped away from the third, *the work*.
-The work undone. Some that she stepped away from, but also work she was denied. 
+Yvette is like a man.  
+-> more here, links in with the cities.
 
-Cancer
+>“I believe that I did in some sense visit Israel with Yvette, that through knowing her, I somehow reached the soul of that land of blessings and curses.” (34)
+
+How did Yvette 'love'? She did not seem to do *the work*. she was looking toward the new jerusalem, but harboured the third city in the way she loved. 
+
+
+Rose *was* dyslexic. And following an opptomitrist declaring one of her eyes as *lazy* - to dispell this cruel accusation of moral failure on her part, she dedicted herself fiercly to the most difficult works, difficult in text and method; Rose studied the Torah, of course and is an Theadore W. Adorno scholar.
+
+
+Having loved Imperfectly is just what it is, but Rose steped away from the third, *the work*. And this is her regret and lonliness as she faces the shadowlands.
+
+The work undone. Some that she stepped away from, but also work she was denied.
+ The priest whom she loved - shockingly, not only did the father step away from his ill Beloved. Upon reading a manuscript of Love's Work and learning of Jim, a previous lover of Roses who died, he called to check if *possibly, she could have AIDS? Need he be worried?* 
+
+Rose was deprived of old age by cancer. We meet the specialists who handle her case.  
 
 >“I asked Mr Wong, “What makes a man become a gynaecologist?” He replied, “Some men love women, and some men hate women”—no admission of unresolved equivocation in that taut response. And what makes a man become a specialist in gynaecological cancer (a field “invented” in the last twenty years)? He will always be breaking the bad news to individual women concerning their female anatomy. And what makes a man a specialist and co-author of the latest, standard textbook on ovarian cancer? Mr Wong answers pragmatically, “I was good with my hands but didn’t want to become an obstetrician like my father.” (82)
 
 
-opinions on ovarian cancer are re-shared with us. We judge for ourselves from the varying meaning and quality of thought, *they are of descending quality*.
+opinions on the causes of ovarian cancer are re-shared with us. We judge for ourselves from the varying meaning and quality of thought, *they are of descending quality*.
 
 
 >“I could compose a divan of divination, an anthology of aetiologies:
@@ -48,10 +67,14 @@ opinions on ovarian cancer are re-shared with us. We judge for ourselves from th
 
 Rose does not dignify *alternative medicine* with any undue attention. Good. 
 
+How it is to shit with a colostomy.
+
 
 What's the current state of thought?
 
 > "revealed religion, enlightenment rationalism, and postmodern relativism" (135)
+
+
 
 
 -------------------------
