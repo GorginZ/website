@@ -12,7 +12,7 @@ topic: monthly-reading
 
 -------------------------
 
-[Gillian Rose's](https://gillianrose.org) contributions to philosophy, sociology, jewish thought and radical politics are important for our time. 
+[Gillian Rose's](https://gillianrose.org) contributions to philosophy, sociology, jewish thought and radical politics are important for our time. I am taking  *To Think the Absolute — Gillian Rose’s Speculative Philosophy* a lecture series by Daniel Lopez at the [Melbourne School of Continental Philosophy](https://mscp.org.au) 
 
 -------------------------
 
@@ -28,6 +28,9 @@ Rose formed part of a curated grouping of Jewish intellectuals to advise the Pol
 
 
 How did rose love? Love is total. There are the two and a third - *the work* 
+
+*Ethical Love*
+Sleeping with another, the vulnerability. Dreaming infront of them.
 
 Yvette is like a man.  
 -> more here, links in with the cities.
@@ -79,7 +82,7 @@ What's the current state of thought?
 
 -------------------------
 
-*"Athens and Jerusalum: a tale of three cities"* in **Mourning Becomes the Law** - **Gillian Rose**  
+# *"Athens and Jerusalum: a tale of three cities"* in **Mourning Becomes the Law** - **Gillian Rose**  
 
 
 
@@ -125,4 +128,58 @@ leszek kolakowski -> 'the left as culture' or something
 
 
 speculative thinking -> she says neitzche is speculative and kierkegaard approaches speculative thinking
+
+----------------
+# *Hegel Contra Sociology* - Gillian Rose
+
+
+context notes for myself
+
+transcendental logic is thinking builds upon itself, build deeper and deeper understanding of the object.
+
+The most primary level of reasoning we natively pocess. neither obesrvable or quantifiable -> like space or time? 
+
+
+Week Two: Relative ethical life and the antinomies of sociological thought
+
+    Hegel Contra Sociology, chapters 1-4
+
+> An attempt to retrieve hegelian speculative experience
+
+wtf is that. How can I do that? Can I even do that?   
+*a contradiction*
+She proposes an aporio.
+she says shes' doing social theory not philosophy.   
+
+there is a transcendental element to culture
+
+Habbermas' return to hegel is ahistorical and ingenuous.  
+
+
+in hegels philosophy speculative thinking is an act.
+The speculative thinking Rose proposes is something we don't know. experience isn't something the agent does, it is passive.
+
+Rose expresses disdain for the insistance of new thought on murdering it's predecessor - it's rejection of it's progeny in the old thought (in some cases). 
+
+NeoKantianism blocks acces to Hegel.
+
+
+NeoKantianism -> People attempting a new answer to the Kantian question of validity within the framework of validity and values first developed by Lotze.
+
+Weber's system -> values only source of sociological reasoning that is acceptable. No way of comparing one system of belives and values with another, except with 'trans valutive somethingarather'. Rose critical of this.
+like Kant -> unable to qualify a experience that takes place outside the subject.
+
+seperation between logic of validity and the epistemological question of cognition 
+-> only if validity can be established independently of cognition can the proces of cognition itself be assessed 7
+
+Validity for Lotze = propositions
+validity fo Kant = concepts
+
+Marlburg and Heidelberg are not NeoKantian
+
+Marlburg school -> validity > values. The idea of 'general logic' and pure reason is the end of transcendental logic. 
+
+Heidelberg school -> values > validity
+
+What does the tranasndental mean here? 
 
