@@ -2,11 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.georgialeng.com/page/tech/cross-namespace-storage-data-sources-in-kubernetes/</loc>
+    <lastmod>2023-03-23T12:32:12+11:00</lastmod>
+  </url><url>
     <loc>https://www.georgialeng.com/</loc>
+    <lastmod>2023-03-23T12:32:12+11:00</lastmod>
+  </url><url>
+    <loc>https://www.georgialeng.com/page/tech/passing-the-cka-exam-2022-2023/</loc>
+    <lastmod>2022-11-08T12:32:12+11:00</lastmod>
+  </url><url>
+    <loc>https://www.georgialeng.com/page/literary/january-2022-readings/</loc>
+    <lastmod>2022-01-09T13:40:55+11:00</lastmod>
+  </url><url>
+    <loc>https://www.georgialeng.com/page/tech/vpc-endpoints-and-tight-nacls/</loc>
     <lastmod>2022-01-02T12:32:12+11:00</lastmod>
   </url><url>
-    <loc>https://www.georgialeng.com/page/vpc-endpoints-and-tight-nacls/</loc>
-    <lastmod>2022-01-02T12:32:12+11:00</lastmod>
+    <loc>https://www.georgialeng.com/page/</loc>
+    <lastmod>2021-12-29T14:58:23+11:00</lastmod>
   </url><url>
     <loc>https://www.georgialeng.com/page/literary/december-2021-readings/</loc>
     <lastmod>2021-12-29T14:58:23+11:00</lastmod>
@@ -14,7 +26,7 @@
     <loc>https://www.georgialeng.com/page/literary/</loc>
     <lastmod>2021-12-29T14:58:23+11:00</lastmod>
   </url><url>
-    <loc>https://www.georgialeng.com/page/</loc>
+    <loc>https://www.georgialeng.com/page/tech/</loc>
     <lastmod>2021-12-29T14:58:23+11:00</lastmod>
   </url><url>
     <loc>https://www.georgialeng.com/page/literary/november-readings/</loc>
@@ -23,13 +35,13 @@
     <loc>https://www.georgialeng.com/page/literary/october-readings/</loc>
     <lastmod>2021-12-29T13:21:53+11:00</lastmod>
   </url><url>
-    <loc>https://www.georgialeng.com/page/about-me/</loc>
+    <loc>https://www.georgialeng.com/page/me/about-me/</loc>
     <lastmod>2021-12-28T16:15:29+11:00</lastmod>
   </url><url>
     <loc>https://www.georgialeng.com/categories/</loc>
   </url><url>
-    <loc>https://www.georgialeng.com/tags/</loc>
+    <loc>https://www.georgialeng.com/series/</loc>
   </url><url>
-    <loc>https://www.georgialeng.com/topics/</loc>
+    <loc>https://www.georgialeng.com/tags/</loc>
   </url>
 </urlset>

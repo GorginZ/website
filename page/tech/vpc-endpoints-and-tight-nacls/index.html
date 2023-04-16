@@ -5,12 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Categories | Home</title>
+<title>Vpc Endpoints and Tight Nacls | Home</title>
 <meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="description" content="This was my first SO question. I was not disappointed by the thoughtful responses I receieved.
+https://stackoverflow.com/questions/69231157/ec2-instance-cant-access-amazon-linux-repos-eg-amazon-linux-extras-install-doc/69248286#69248286">
 <meta name="author" content="">
-<link rel="canonical" href="https://www.georgialeng.com/categories/">
+<link rel="canonical" href="https://www.georgialeng.com/page/tech/vpc-endpoints-and-tight-nacls/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.georgialeng.com/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.georgialeng.com/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.georgialeng.com/favicon-32x32.png">
@@ -18,7 +21,6 @@
 <link rel="mask-icon" href="https://www.georgialeng.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://www.georgialeng.com/categories/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,18 +57,78 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.georgialeng.com/categories/" />
+</noscript><meta property="og:title" content="Vpc Endpoints and Tight Nacls" />
+<meta property="og:description" content="This was my first SO question. I was not disappointed by the thoughtful responses I receieved.
+https://stackoverflow.com/questions/69231157/ec2-instance-cant-access-amazon-linux-repos-eg-amazon-linux-extras-install-doc/69248286#69248286" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.georgialeng.com/page/tech/vpc-endpoints-and-tight-nacls/" /><meta property="article:section" content="page" />
+<meta property="article:published_time" content="2022-01-02T12:32:12+11:00" />
+<meta property="article:modified_time" content="2022-01-02T12:32:12+11:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Vpc Endpoints and Tight Nacls"/>
+<meta name="twitter:description" content="This was my first SO question. I was not disappointed by the thoughtful responses I receieved.
+https://stackoverflow.com/questions/69231157/ec2-instance-cant-access-amazon-linux-repos-eg-amazon-linux-extras-install-doc/69248286#69248286"/>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "By Topic",
+      "item": "https://www.georgialeng.com/page/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Tech",
+      "item": "https://www.georgialeng.com/page/tech/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  4 ,
+      "name": "Vpc Endpoints and Tight Nacls",
+      "item": "https://www.georgialeng.com/page/tech/vpc-endpoints-and-tight-nacls/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Vpc Endpoints and Tight Nacls",
+  "name": "Vpc Endpoints and Tight Nacls",
+  "description": "This was my first SO question. I was not disappointed by the thoughtful responses I receieved.\nhttps://stackoverflow.com/questions/69231157/ec2-instance-cant-access-amazon-linux-repos-eg-amazon-linux-extras-install-doc/69248286#69248286",
+  "keywords": [
+    
+  ],
+  "articleBody": "This was my first SO question. I was not disappointed by the thoughtful responses I receieved.\nhttps://stackoverflow.com/questions/69231157/ec2-instance-cant-access-amazon-linux-repos-eg-amazon-linux-extras-install-doc/69248286#69248286\n",
+  "wordCount" : "17",
+  "inLanguage": "en",
+  "datePublished": "2022-01-02T12:32:12+11:00",
+  "dateModified": "2022-01-02T12:32:12+11:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.georgialeng.com/page/tech/vpc-endpoints-and-tight-nacls/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Home",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.georgialeng.com/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -125,12 +187,29 @@
     </nav>
 </header>
 <main class="main">
-<header class="page-header">
-    <h1>Categories</h1>
-</header>
 
-<ul class="terms-tags">
-</ul>
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://www.georgialeng.com">Home</a>&nbsp;»&nbsp;<a href="https://www.georgialeng.com/page/">By Topic</a>&nbsp;»&nbsp;<a href="https://www.georgialeng.com/page/tech/">Tech</a></div>
+    <h1 class="post-title">
+      Vpc Endpoints and Tight Nacls
+    </h1>
+    <div class="post-meta"><span title='2022-01-02 12:32:12 +1100 +1100'>January 2, 2022</span>
+
+</div>
+  </header> 
+
+  <div class="post-content"><p>This was my first SO question. I was not disappointed by the thoughtful responses I receieved.</p>
+<p><a href="https://stackoverflow.com/questions/69231157/ec2-instance-cant-access-amazon-linux-repos-eg-amazon-linux-extras-install-doc/69248286#69248286">https://stackoverflow.com/questions/69231157/ec2-instance-cant-access-amazon-linux-repos-eg-amazon-linux-extras-install-doc/69248286#69248286</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
     </main>
     
 <footer class="footer">
@@ -200,6 +279,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
