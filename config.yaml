@@ -17,11 +17,11 @@ languages:
                 - name: Tech
                   url: /page/tech
                   weight: 5
-                - name: Me
-                  url: /page/me/about-me/
+                - name: About
+                  url: /page/about/about-me/
                   weight: 5
-                - name: Literary
-                  url: /page/literary/
+                - name: Reading
+                  url: /page/reading/
                   weight: 5
 params:
   defaultTheme: auto
