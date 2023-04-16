@@ -1,14 +1,15 @@
 ---
 title: "January 2022 Readings"
 date: 2022-01-09T13:40:55+11:00
-draft: true
+draft: false
 topic: monthly-reading
 ---
-# January 2022 Readings
 
 *Love's Work* - **Gillian Rose** . 
 *Mourning Becomes the Law* - **Gillian Rose** . 
 *“From Speculative to Dialectical Thinking — Hegel and Adorno”* in **Judaism and Modernity** - **Gillian Rose**
+
+*This is really just my reading notes.*
 
 -------------------------
 
@@ -16,13 +17,14 @@ topic: monthly-reading
 
 -------------------------
 
+
 # **Love's Work - Gillian Rose** 
     
- >>>**keep your mind in hell,**  
- >>>**and despair not.**
+ >**keep your mind in hell,**  
+ >**and despair not.**
    
    
-*Loves Work* is a mémoire. There is Death - of loved ones, in Auschwitz, the indomitable. There is Family Trauma, Judaism, Prodestantism, Faith, Love, Cancer, The Work, the taste of regret.  
+*Loves Work* is a mémoire. There is Death - of loved ones, in Auschwitz, the indomitable. There is Family Trauma, Judaism, Protestantism, Faith, Love, Cancer, The Work, the taste of regret.  
 
 Rose formed part of a curated grouping of Jewish intellectuals to advise the Polish Commision on the Future of Auschwitz.
 
@@ -117,11 +119,11 @@ rose says -> the loss of actor and the other.
 -----------------
 notes from Daniel's talk.
 
-very psychoanalytic. 
+very psychoanalytic - the approach will be. 
 
-she converted to anglicanism on her death bed ?
+Rose converted to anglicanism on her death bed.
 
-the particular - particular s in particular to group and the universal
+"the particular" - particular as in particular to group and the universal
 
 
 leszek kolakowski -> 'the left as culture' or something
@@ -137,7 +139,7 @@ context notes for myself
 
 transcendental logic is thinking builds upon itself, build deeper and deeper understanding of the object.
 
-The most primary level of reasoning we natively pocess. neither obesrvable or quantifiable -> like space or time? 
+The most primary level of reasoning we natively posses, neither observable or quantifiable -> like space or time? 
 
 
 Week Two: Relative ethical life and the antinomies of sociological thought

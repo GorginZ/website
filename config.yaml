@@ -1,0 +1,59 @@
+baseURL: "https://www.georgialeng.com"
+languageCode: 'en'
+title: Home
+theme: PaperMod
+paginate: 5
+
+languages:
+    en:
+        languageName: "English"
+        weight: 1
+        taxonomies:
+          category: categories
+          tag: tags
+          series: series
+        menu:
+            main:
+                - name: Tech
+                  url: /page/tech
+                  weight: 5
+                - name: Me
+                  url: /page/me/about-me/
+                  weight: 5
+                - name: Literary
+                  url: /page/literary/
+                  weight: 5
+params:
+  defaultTheme: auto
+  ShowToc: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+
+
+# profileMode:
+#   enabled: true
+#   title: PaperMod
+#   imageUrl: "#"
+#   imageTitle: my image
+#   # imageWidth: 120
+#   # imageHeight: 120
+#   buttons:
+#       - name: Archives
+#         url: archives
+#       - name: Tags
+#         url: tags
+
+  homeInfoParams:
+      Title: Georgia Leng
+      Content: \"devops\" engineer, k8s enjoyer.
+
+  socialIcons: # optional
+      - name: "github"
+        url: "https://github.com/GorginZ"
+      - name: "stackoverflow"
+        url: "https://stackoverflow.com/users/15286943/gorginz"
+      - name: "linkedin"
+        url: "https://www.linkedin.com/in/georgia-leng-35666b1b1/"
+
+
+
