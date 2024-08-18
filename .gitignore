@@ -1,1 +1,5 @@
 /public
+#mac stuff
+.DS_Store
+#hugo stuff
+.hugo_build.lock
