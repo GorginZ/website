@@ -1,36 +1,47 @@
 ---
 title: "GRWM: for production"
 date: 2024-08-08T12:32:12+11:00
-draft: true
+draft: false
 topic: tech
 ---
 
-# GRWM for production: be production ready
+# GRWM: Get your kubernetes workload ready for production
 
-Things to ask yourself.
+There's lots of powerful levers we can pull to configure a resilient workload that can benefit from the orchestration features Kubernetes provides. In this piece we'll look at what we should ask ourselves to identify how to configure a particular workload and get it production ready.
 
+## Workload Management
 
-## What does the workload do and what does it need to run?
+#### *How* should we run it?
 
-#### Workload Management
+It's important to understand the [workload mangement](https://kubernetes.io/docs/concepts/workloads/controllers/) options Kubernetes offers and selecting the appropriate controller for the service. What the workload itself actually does is a great starting point.
 
-It's important to understand the [workload mangement](https://kubernetes.io/docs/concepts/workloads/controllers/) options Kubernetes offers and selecting the appropriate one for the application.
+Most applications should run as [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). This is simply because Kubernetes is best suited for stateless workloads. To get the most out of the "self-healing" powers and scaleability of k8s you should do your best to externalise any state.
 
-Generally applications should run as deployments. 
-Specialised services that monitor things on nodes should be daemonsets, and certain stateful workloads that depend on cardinal services and application state need to be statefulsets.
-Kubernetes is best suited for stateless workloads, and to get the most out of the "self-healing" powers and scaleability of k8s you should do your best to externalise any state.
+Kubernetes does accommodate stateful workloads with [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) and persistentVolumes. These are sometimes used to take advantage of the ordinal pod numbers for workloads where identity of the instance matters. Again if you can avoid running something stateful in k8s you really should. That could mean using a managed service instead of running your own database in kubernetes or if you're running something like Prometheus, moving to a scrape and forward model so the workload itself could be as close to stateless as you can get (and allow you to run it as a Deployment or Daemonset instead of a StatefulSet)
 
-A quick dirty flowchart:
+Tasks will be suited to [CronJobs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) or [Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/) which deserve their own post on configuring.
+
+#### A quick dirty flowchart:
+
+>Note: if you are *not* a cluster administrator, disregard daemonSets in the below flow-chart. Daemonsets run a pod on every node, specialised system workloads like network plugins are an example of a workload that would be run as a DaemonSet.
 
 ![image](images/workload-management-flow-chart.png)
 
 
 #### Scheduling
-- What are the application's resource requirements? This includes CPU, memory
-- Node requirements
-  Are there specialised nodes (high memory, or different architectures, need GPUs?)
+
+Whatever you're running, to get it scheduled on a node by [kube-scheduler](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-scheduler/) the workload needs to state it's terms.
+
+- What are the application's resource requirements? This includes CPU, memory and ephemeral storage. What would appropriate requests be?
+- Node requirements:
+  - Are there specialised nodes available that this workload needs to use (high memory, or different architectures, need GPUs?)
+  - Should the workload isolated from other workloads?
+  - OS?
+- Is the workload "critical" or very high priority? Administrators may allow you to leverage [PriorityClasses](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/#priorityclass) if you workload is very, very special 
 
 #### Data
+
+
 
 #### Config
 
@@ -38,6 +49,11 @@ A quick dirty flowchart:
 #### liefcycle
 - preStop hooks
 
+
+#### Be a good citizen
+
+- resource limits
+- let cronjobs fail nicely.
 
 
 
