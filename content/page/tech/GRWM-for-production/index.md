@@ -99,16 +99,44 @@ Make sure your objects will all behave "sanely" together while you deploy. Be mi
 
 
 #### Being Reliable: High Availability, Fault Tolerance, Scaling etc.
-- Run your workload with a high availability topology
-- See scheduling and antiAffinities and other ways to do this
-- run multiple replicas
-- Configure a HPA appropriately
-  - is your workload memory bound? cpu bound? maybe neither? maybe queue length you will need custom metrics to scale in that case. Find out what the good
-- Consider VPA if appropriate
+- Run your workload with a high availability topology. See [pod topology spread constraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) as well as [inter-pod affinity and anti-affinity](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity) to see how these powerful and flexible levers can achieve advanced scheduling preferences and rules - like not putting lots of pods on the same host, or cloud same availability zone or wherever you do or don't want them, the levers are there.
+- Scale, *your production workload must scale*. Decide if your workload benefits more from scaling horizontally or vertically (or both). Understand under what conditions the workload benefits from scaling and when to trigger it. 
+  - HPA [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) objects scale your workload horizontally - that is you get more copies of the workload. Ask your yourself is the workload memory bound? cpu bound? Great those are supported natively. If neither are ideal - like maybe queue length or response codes or something suite better, maybe you'll need to work with cluster admins to use custom metrics and something like [prometheus-adaptor](https://github.com/kubernetes-sigs/prometheus-adapter) to enable you HPA to scale based on queue length or whatever it is it makes sense for you to scale on.
+  >note: when you define a HPA for a deployment, you should omit ```spec.replicas``` because [HPA will manage it](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#migrating-deployments-and-statefulsets-to-horizontal-autoscaling), if you are adding a HPA to an existing deployment though, follow instructions in the documentation to take care in not causing an accidental change in your replica count. 
+  - VPA. I have never used [Vertical Pod Autoscaling](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler), and haven't really had a workload that compelled me to advocate to install it - but it sounds cool. It allows you to scale on your resources. It's not part of vanilla k8s so you'll have to see if it is installed or enabled as a plugin in the cluster. Definitely explore if this is an option in your cluster! 
 
-#### Be a good citizen
 
-- resource limits
-- let cronjobs fail nicely.
+#### Logging, Monitoring and Alerting and hopefully Observability
 
+This is highly contingent on the landscape of the environment so it's really just an honorary mention because this is about getting a workload production ready and in production we should be able to know the status of our workloads without checking them ourselves! But this is really a little outside the scope of configuring kubernetes native objects...but it's a reminder to learn about what instrumentation options are available for you and how to leverage them!
+
+
+Look at your platform team's documentation, hopefully they run some tools that allow you to either see some basic information about your workloads or maybe even allow you to expose and scrape metrics of your own (if you need to do that)
+
+The gold standard for kubernetes workload metrics is [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics), kube-state-metrics is my best friend. If your cluster admins have exposed a subset of kube-state-metrics metrics for you like [pod metrics](https://github.com/kubernetes/kube-state-metrics/blob/main/docs/metrics/workload/pod-metrics.md), these are what you can use to configure alerts for things like pods that are constantly restarting, or in some sort of failed state and basically everything you could ever want to know. The cluster admins/platform owners will, I imagine be very happy to point you in the direction of what is available for you in your cluster environment.
+
+TODO logging more here
+
+
+#### Security
+
+- Elect the correct [pod security standard](https://kubernetes.io/docs/concepts/security/pod-security-standards/) for your workload, ```restricted``` being best practice where possible.
+- Follow [best practices for using secrets](https://kubernetes.io/docs/concepts/security/secrets-good-practices/#developers). Secrets in kubernetes are *not that secret* and they're namespace scoped. Your cluster admins may use an external service for sensitive data such as vault or integrate with a cloud platform's secret service for more sensitive things. Make sure you understand what options are available to you for sensitive data your application needs.
+- Configure appropriate [seccom profile](https://kubernetes.io/docs/tutorials/security/seccomp/) for the containers.
+- If your admins are up-to-date with the recent kubernetes versions you may be able to leverage [appArmor](https://kubernetes.io/docs/tutorials/security/apparmor/#securing-a-pod).
+- Image security: scan your images, target a specific tag **don't use ```:latest```**.
+
+
+#### Deploying Changes
+Maybe there's another post here but certainly we can explore some examples in the part two of this where we'll set up an application start to finish, but some important mentions:
+
+- Use some templating tooling to dry up your code: helm template, [ktmpl](https://github.com/jimmycuadra/ktmpl) (I love this little simple tool and was surprised it is not hugely popular), gotmpl etc. to plugin the values that differ between your environments. 
+- Leverage CICD tooling to automate your deployments, hopefully there's a nice offering from your platform team and even some nice patterns to follow. Otherwise, you'll have to roll your own - just don't manually apply things to your cluster via kubectl commands in non emergent situations. 
+
+
+#### Backup and Disaster Recovery Planning
+
+You aren't production ready without understanding what kind of availability you want to try to provide and how you can meet it and recover from particular scenarios should things go awry. 
+
+TODO more here
 
