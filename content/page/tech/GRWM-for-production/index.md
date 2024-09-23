@@ -9,6 +9,8 @@ topic: tech
 
 In this piece, we will explore the key considerations for configuring a resilient workload and preparing it for production in Kubernetes. By asking ourselves the right questions, we can effectively leverage the orchestration features provided by Kubernetes to ensure our workload is well-configured and ready for deployment.
 
+In a part two I'll step through configuring this for an example application.
+
 
 
 ## Workload Management
@@ -35,10 +37,10 @@ Workloads that could be described as "tasks" will be suited to [CronJobs](https:
 
 To get scheduled on an appropriate node by [kube-scheduler](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-scheduler/) the workload should define what resources or other host requirements it needs.
 
-- What are the application's resource requirements? This includes CPU, memory and ephemeral storage. What would appropriate requests be?
-- Node requirements:
+- What are the application's resource requirements? This includes CPU, memory and ephemeral storage. What would appropriate [requests and limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) be? Resource requests are used to appropriately schedule the workload on an accommodating node.
+- Node requirements. To get scheduled on a particular type of node you have a number of levers available to you which are documented [here](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/).:
   - Are there specialised nodes available that this workload needs to use (high memory, or different architectures, need GPUs?)
-  - Should the workload isolated from other workloads?
+  - Should the workload isolated from other workloads? 
   - OS?
 - Is the workload "critical" or very high priority? Administrators may allow you to leverage [PriorityClasses](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/#priorityclass). 
 
@@ -51,21 +53,58 @@ Your application probably needs some values that it requires to run as well as o
 There are multiple ways to expose these values to workloads by leveraging the native Kubernetes objects. What do you need to pass in to your workload? We can achieve this with:
 
 - [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
-  - designed for small sensitive data. For decoupling sensitive data from code. NOTE THAT THEY ARE STORED UNENCRYPTED IN ETCD. So often secrets are not used for *actually* sensitive data. Consider other secret management services that integrate with k8s here.
+  - For small sensitive data. For decoupling sensitive data from code. NOTE THAT THEY ARE STORED UNENCRYPTED IN ETCD. So often secrets are not used for *actually* sensitive data. Consider other secret management services that integrate with k8s here.
 - [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
-  - For non-confidential data, is in key-value pairs.
-  - great for things like nginx config file, or a set of configuration key pair values that you can mount as envVars fo the application.
+  - For non-confidential data, defined in key-value pairs.
+  - Great for things like nginx config file, or a set of configuration key pair values that you can mount as envVars for the application.
+
+ Consume configuration objects:
+
  - You can [mount objects like ConfigMaps as Volumes for your container to consume.](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#populate-a-volume-with-data-stored-in-a-configmap)  
+
 - [Environment Variables](https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/) - You can set environment variables directly (which you could template) or by referencing an object like a Secret, ConfigMap or Volume
-- If there are some special actions that need to take place for configuration that for some reason can't be served by already existing objects, or there's a timing problem that the value for something can't be known until whenever - [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/) could be leveraged to do the work of helping create the configuration for the "main" app and updating a shared volume for the pod (just as an example). Will discuss these in lifecycle management section.
 
-Read the kubernetes [workload configuration best practices](https://kubernetes.io/docs/concepts/configuration/overview/#general-configuration-tips) 
+If there are some special actions that need to take place for configuration that for some reason can't be served by already existing objects, or there's a timing problem that the value for something can't be known until whenever - [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/) could be leveraged to do the work of helping create the configuration for the "main" app and updating a shared volume for the pod (just as an example). Will discuss these in lifecycle management section.
 
-#### liefcycle
+Do go ahead and read the kubernetes [workload configuration best practices](https://kubernetes.io/docs/concepts/configuration/overview/#general-configuration-tips) 
 
-- init containers if needed.
-- preStop hooks
+#### workload lifecycle management
 
+Workloads running in Kubernetes get their resilience from the constant control loops that maintain a desired state for a workload, there's a few configurations that are important for maintaining stability across things like upgrades to the underlying host nodes, making sure that on start-up the container only receives traffic when it is ready and others.
+
+##### Start Up
+
+Things to configure to make sure your application starts right and keeps going while it should.
+
+
+If you application needs some special work done before it can begin, [init containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/) are how you could ensure the application container(s) don't start until a number of conditions are met. You can (in v1.29) also use init containers to run a [Sidecar](https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/#pod-sidecar-containers) by setting ```restartPolicy: Always```.
+
+All containers should have Liveness, Readiness and Startup [probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) configured as needed, and great care should be given to these. These probes are used by Kubelet to determine the health and status of a container to know if it is ready to receive traffic or failed and should be restarted. If misconfigured they can make deployments difficult or leave an unhealthy workload running without much feedback or worse, they're essential for production workloads so just do your due diligence.
+
+##### Finish Up
+
+Sometimes containers or nodes die and that's just "the cloud" things are ephemeral and that's fine and good, and you'll rely on having a highly available configuration to manage that, but hopefully most of the time your workloads stop it's because either:
+- less traffic so you're scaling down the deployment through a Horizontal Pod Autoscaler
+- kubernetes upgrades require draining the node so it can be upgraded
+- cluster is scaling down to save money yay, so the node is being drained
+
+For cases where there's more control over shut downs we can make sure they go as smooth as possible by setting appropriate ```terminationGracePeriodSeconds``` for the application container and we should use [Container Hooks](https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/), particularly preStop hooks aid by giving us a way to closing any long running requests or connections and terminating our application gracefully.
+
+
+##### Handle Change Smoothly
+
+There's a bunch of deployment strategies that are popular and ways to implement them in k8s like blue-green or whatever but let's just look at the native things.
+
+Make sure your objects will all behave "sanely" together while you deploy. Be mindful of if you configure a [Pod Disruption Budget](https://kubernetes.io/docs/tasks/run-application/configure-pdb/) for your workload it also suits you well for while you're rolling out a change to the deployment object. I've seen teams whose change was taking a very long time and they asked for help - their PDB had made their deployment's [RollingUpdate](https://kubernetes.io/docs/tasks/run-application/configure-pdb/) change go very slowly because they wanted an outrageous number of replicas and a very conservative disruption budget.
+
+
+#### Being Reliable: High Availability, Fault Tolerance, Scaling etc.
+- Run your workload with a high availability topology
+- See scheduling and antiAffinities and other ways to do this
+- run multiple replicas
+- Configure a HPA appropriately
+  - is your workload memory bound? cpu bound? maybe neither? maybe queue length you will need custom metrics to scale in that case. Find out what the good
+- Consider VPA if appropriate
 
 #### Be a good citizen
 
@@ -73,104 +112,3 @@ Read the kubernetes [workload configuration best practices](https://kubernetes.i
 - let cronjobs fail nicely.
 
 
-
-# A hypothetical
-
-In this piece I'll prepare a hypothetical app to deploy in kubernetes to show some of the important first things we should configure to get production ready that will apply broadly to most workloads.
-
-In our scenario the developers have already containerised their app and are seeking our guidence on how to get production ready and deploy to a cluster. We're going to step them through.
-
-## What does the workload do and what does it need to run?
-
-For this hypothetical I'm going to say our cool app is some backend component that is talked to by a frontend in the cluster and also talks to an external database.
-
-- It expects to run in a linux os.
-- needs to be able to communicate to cool-frontend service
-- needs to be able to communicate to external postgres db
-
-
-#### Workload Management
-
-The first thing we need to decide is what is appropriate [workload mangement](https://kubernetes.io/docs/concepts/workloads/controllers/) option for our service
-If our workload is always meant to be up and running we'll be looking at Deployments, StatefulSets and Daemonsets. If the workload is completing a task we'd consider a job or cronjob.
-
-Our application most suites a Deployment, we want to be able to run multiple replicas but we don't need statefulness and we don't need our workload to run on all nodes so we wouldn't even consider those as viable options in this case.
-
-#### Let's start building out the spec
-
-let's get a yaml to get started with:
-
-```bash
-k create deployment cool-backend --image cool-backend:v0.0.1 --dry-run=client -o yaml > cool-deployment.yaml
-```
-
-This gives us something to start with. We can remove some bits:
-
-```diff
-apiVersion: apps/v1
-kind: Deployment
-metadata:
---  creationTimestamp: null
-  labels:
-    app: cool-backend
-  name: cool-backend
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: cool-backend
-  strategy: {}
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        app: cool-backend
-    spec:
-      containers:
-      - image: cool-backend:v0.0.1
-        name: cool-backend:w
-
-        resources: {}
---status: {}
-```
-
-----
-
-#### scheduling
-kube-scheduler will schedule your workload best it can, ranking nodes for suitability. We can help kube-scheduler find the best node for us.
-
-- is your workload CPU or memory bound?
-- architecture?
-- special nodes?
-
-## Be a good citizen 
-
-Multitenant clusters owns and run by a platform team are great, but we have a responsability to not be greedy! If you're running in a multi-tenant cluster it's likely there are limits in place to prevent resource hogging - also maybe there's chargeback so we should care about what we really need.
-
-
-## Releases
-- how are you promoting images?
-- strategy?
-- CICD?
-- k8s side, PDB, how blue green implemented
-
-# Be reliable
-high availability
-
-fault tolerance 
-
-scaleability
-
-- when do you need to scale up? (cpu, memory, custom metrics like queue length, latency)
-- horizontal or vertical scaling? What is available in the cluster?
-
-## Healthz
-
-
-## Templating
-
-
-#### Thoughts and opinions
-
-
-Where possible it's simplest to avoid running stateful applications in Kubernetes, that could mean using a managed service instead of running your own database in kubernetes or if you're running something like Prometheus, moving to a scrape and forward model so the workload itself could be as close to stateless as you can get (and allow you to run it as a Deployment or Daemonset instead of a StatefulSet)
