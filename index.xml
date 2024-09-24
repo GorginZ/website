@@ -6,7 +6,17 @@
     <description>Recent content on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Mar 2023 12:32:12 +1100</lastBuildDate><atom:link href="https://www.georgialeng.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Aug 2024 12:32:12 +1100</lastBuildDate><atom:link href="https://www.georgialeng.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GRWM: for production</title>
+      <link>https://www.georgialeng.com/page/tech/grwm-for-production/</link>
+      <pubDate>Thu, 08 Aug 2024 12:32:12 +1100</pubDate>
+      
+      <guid>https://www.georgialeng.com/page/tech/grwm-for-production/</guid>
+      <description>GRWM: Get Your Kubernetes Workload Ready for Production By asking ourselves the right questions about a deployment&amp;rsquo;s needs we can effectively use the orchestration features provided by Kubernetes to ensure our workload is production ready and resilient. The focus will be on vanilla Kubernetes objects and best practices, but I&amp;rsquo;ll touch on adjacent topics as well - it&amp;rsquo;ll be a production ready list of TODOs for consideration.
+In a part two I&amp;rsquo;ll step through configuring an example application.</description>
+    </item>
+    
     <item>
       <title>Cross-Namespace Storage Data Sources In Kubernetes</title>
       <link>https://www.georgialeng.com/page/tech/cross-namespace-storage-data-sources-in-kubernetes/</link>
