@@ -7,10 +7,9 @@ topic: tech
 
 # GRWM: Get your kubernetes workload ready for production
 
-In this piece, we will explore the key considerations for configuring a resilient workload and preparing it for production in Kubernetes. By asking ourselves the right questions, we can effectively leverage the orchestration features provided by Kubernetes to ensure our workload is well-configured and ready for deployment.
+By asking ourselves the right questions about a deployment's needs we can effectively leverage the orchestration features provided by Kubernetes to ensure our workload is production ready and resilient. The focus will be on vanilla kubernetes objects and best practices, but I'll touch on adjacent topics as well - it'll be a production ready list of TODOs for consideration. 
 
 In a part two I'll step through configuring this for an example application.
-
 
 
 ## Workload Management
@@ -31,7 +30,7 @@ Workloads that could be described as "tasks" will be suited to [CronJobs](https:
 #### A quick dirty flowchart:
 
 ![image](images/workload-management-flow-chart.png)
->Note: if you are *not* a cluster admin, disregard daemonSets in the flow-chart. Daemonsets run a pod on every node, specialised system workloads like network plugins are an example of a workload that must be run as a DaemonSet.
+>Note: if you are *not* a cluster admin, disregard [DaemonSets](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) in the flow-chart. DaemonSets run a pod on every node, specialised system workloads like network plugins are an example of a workload that must be run as a DaemonSet.
 
 #### Scheduling
 
@@ -90,7 +89,7 @@ Sometimes containers or nodes die and that's just "the cloud" things are ephemer
 
 For cases where there's more control over shut downs we can make sure they go as smooth as possible by setting appropriate ```terminationGracePeriodSeconds``` for the application container and we should use [Container Hooks](https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/), particularly preStop hooks aid by giving us a way to closing any long running requests or connections and terminating our application gracefully.
 
-TODO underutilised is terminationMessage customization https://kubernetes.io/docs/tasks/debug/debug-application/determine-reason-pod-failure/#customizing-the-termination-message
+Leave yourself some good easy to read clues if the container does fail unexpectedly. Learn about [terminationMessage configuration options](https://kubernetes.io/docs/tasks/debug/debug-application/determine-reason-pod-failure/#customizing-the-termination-message). I think that ```terminationMessagePolicy``` being set to ```FallbackToLogsOnError``` is really underutilised! It enables you to capture a subset of the containers "last words" if it exited on error - maybe they'll be helpful, maybe not, but it's a great nice to have that's highly visible on a ```kubectl describe``` of the pod and I really love this configuration but I've still not met anyone else who really leverages it so I'm pretty sure it's under appreciated. Read about [terminationMessage customization](https://kubernetes.io/docs/tasks/debug/debug-application/determine-reason-pod-failure/#customizing-the-termination-message).
 
 
 
@@ -140,7 +139,6 @@ Maybe there's another post here but certainly we can explore some examples in th
 
 #### Backup and Disaster Recovery Planning
 
-You aren't production ready without understanding what kind of availability you want to try to provide and how you can meet it and recover from particular scenarios should things go awry. 
+You aren't production ready without understanding what kind of availability you want to try to provide and how you can  recover from particular scenarios should things go awry. Define your [SLIs, SLO, SLA's](https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos) etc. Really this post is for people who are running something in a cluster that other people manage, and just setting up the kubernetes resources/shopping list of TODOs, but it's important to mention DR.
 
-TODO more here
-
+In a part two post I'll step through a concrete application. 
