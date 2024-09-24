@@ -90,6 +90,9 @@ Sometimes containers or nodes die and that's just "the cloud" things are ephemer
 
 For cases where there's more control over shut downs we can make sure they go as smooth as possible by setting appropriate ```terminationGracePeriodSeconds``` for the application container and we should use [Container Hooks](https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/), particularly preStop hooks aid by giving us a way to closing any long running requests or connections and terminating our application gracefully.
 
+TODO underutilised is terminationMessage customization https://kubernetes.io/docs/tasks/debug/debug-application/determine-reason-pod-failure/#customizing-the-termination-message
+
+
 
 ##### Handle Change Smoothly
 
@@ -108,17 +111,18 @@ Make sure your objects will all behave "sanely" together while you deploy. Be mi
 
 #### Logging, Monitoring and Alerting and hopefully Observability
 
-This is highly contingent on the landscape of the environment so it's really just an honorary mention because this is about getting a workload production ready and in production we should be able to know the status of our workloads without checking them ourselves! But this is really a little outside the scope of configuring kubernetes native objects...but it's a reminder to learn about what instrumentation options are available for you and how to leverage them!
+This is highly contingent on the landscape of the environment so it's really just an honorary mention because this is about getting a workload production ready and in production we should be able to know the status of our workloads without having to check them ourselves! But this is really a little outside the scope of configuring kubernetes native objects...but it's a reminder to learn about what logging, monitoring, instrumentation etc. options are available for you and how to leverage them!
 
 
-Look at your platform team's documentation, hopefully they run some tools that allow you to either see some basic information about your workloads or maybe even allow you to expose and scrape metrics of your own (if you need to do that)
+Look at your platform/observability team's documentation, hopefully they run some tools that allow you to either see some basic information about your workloads or maybe even allow you to expose and scrape metrics of your own (if you need to do that)
 
 The gold standard for kubernetes workload metrics is [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics), kube-state-metrics is my best friend. If your cluster admins have exposed a subset of kube-state-metrics metrics for you like [pod metrics](https://github.com/kubernetes/kube-state-metrics/blob/main/docs/metrics/workload/pod-metrics.md), these are what you can use to configure alerts for things like pods that are constantly restarting, or in some sort of failed state and basically everything you could ever want to know. The cluster admins/platform owners will, I imagine be very happy to point you in the direction of what is available for you in your cluster environment.
 
-TODO logging more here
+Learn how to access your logs, directly from your pod is important for daily little things, but your cluster admins hopefully have some log aggregation set up perhaps in partnership with an observability team, understand these systems and how to use the centralised logging service that's (hopefully) available to you so you can leverage [structured logging](https://www.sumologic.com/glossary/structured-logging/). Depending on the ecosystem there are a number of tools and stacks that may be available for you to use to [instrument](https://opentelemetry.io/docs/concepts/instrumentation/) your application and get the most out of your logs. I'm really interested in learning more about honeycomb at the moment and [this instrumentation exercise](https://www.honeycomb.io/blog/demo-app-opentelemetry-instrumentation-honeycomb) looks neat.
 
 
 #### Security
+
 
 - Elect the correct [pod security standard](https://kubernetes.io/docs/concepts/security/pod-security-standards/) for your workload, ```restricted``` being best practice where possible.
 - Follow [best practices for using secrets](https://kubernetes.io/docs/concepts/security/secrets-good-practices/#developers). Secrets in kubernetes are *not that secret* and they're namespace scoped. Your cluster admins may use an external service for sensitive data such as vault or integrate with a cloud platform's secret service for more sensitive things. Make sure you understand what options are available to you for sensitive data your application needs.
