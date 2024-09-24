@@ -1,7 +1,7 @@
 ---
 title: "GRWM: for production"
 date: 2024-08-08T12:32:12+11:00
-draft: true
+draft: false
 topic: tech
 ---
 
@@ -21,13 +21,13 @@ It's important to understand the [workload mangement](https://kubernetes.io/docs
 Most applications should run as [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). To get the most out of the "self-healing" powers and scaleability of k8s you should do your best to externalise any application state and allow your application instances to be totally interchangeable. There may be some "pre work" to do that can help prepare the application itself for deployment - read about [The Twelve Factor App.](https://12factor.net/) 
 
 
-Kubernetes accommodates stateful workloads with [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) and [PersistentVolumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/). These can be used to leverage the ordinal pod numbers for workloads where the unique identity of the instance matters. 
+Kubernetes accommodates stateful workloads with [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) and [PersistentVolumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/). These can be used also for the ordinal pod numbers the workloads are assigned where the unique identity of the instance matters. And *sometimes* people leverage statefulSets because they just like the stable pod name and the replicaset suffix and pod unique id from a Deployment pod is just too annoying for them - and these people of course have no idea how poor a decision they are making otherwise they would be too shamed to do it!
 
 
 
 Workloads that could be described as "tasks" will be suited to [CronJobs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) or [Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/) which deserve their own post on configuring.
 
-#### A quick dirty flowchart:
+A quick dirty flowchart:
 
 ![image](images/workload-management-flow-chart.png)
 >Note: if you are *not* a cluster admin, disregard [DaemonSets](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) in the flow-chart. DaemonSets run a pod on every node, specialised system workloads like network plugins are an example of a workload that must be run as a DaemonSet.
