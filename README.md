@@ -1,2 +1,2 @@
 # Website
-My personal site. Casual.
+My personal website. Casual.
